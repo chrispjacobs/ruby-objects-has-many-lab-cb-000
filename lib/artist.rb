@@ -33,5 +33,5 @@ class Artist
     end
   end
 
-the_beatles = Artist.new("The Beatles")
-the_beatles.add_song_by_name("Help!")
+# the_beatles = Artist.new("The Beatles")
+# the_beatles.add_song_by_name("Help!")
