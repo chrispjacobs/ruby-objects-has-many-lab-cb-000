@@ -38,4 +38,3 @@ the_beatles = Artist.new("The Beatles")
 the_beatles.add_song_by_name("Help!")
 the_beatles.add_song_by_name("Lucy in the Sky with Diamonds")
 puts the_beatles.song_count
-
