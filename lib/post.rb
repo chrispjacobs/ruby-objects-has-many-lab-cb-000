@@ -9,7 +9,10 @@ class Post
   def author=(author_variable)
     @author = author_variable
   end
-  def author_name
+  def author
     @author
+  end
+  def author_name
+    @author[0].name
   end
 end
