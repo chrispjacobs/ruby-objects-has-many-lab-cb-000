@@ -13,6 +13,7 @@ class Author
     end
     def add_post_by_title(post_title)
       post_variable = Post.new(post_title)
+      post_variable.author = self
       @posts << post_variable
     end
     def posts
