@@ -15,4 +15,7 @@ class Post
   def author_name
     @author[0].name
   end
+  def self.all
+    @@all
+  end
 end
