@@ -19,9 +19,8 @@ class Artist
       end
     end
     def add_song_by_name(name_string)
-      new_song_variable = Song.new
+      new_song_variable = Song.new(name_string)
       puts "We just initialized #{new_song_variable}"
-      new_song_variable.name = name_string
       puts "new_song_variable.name returns #{new_song_variable.name}"
       puts "new_song_variable.artist initially returns #{new_song_variable.artist}"
       if new_song_variable.artist == nil
