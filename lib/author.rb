@@ -9,6 +9,9 @@ class Author
   end
   def add_post(post_variable)
     @posts << post_variable
+    if post_variable.author = nil
+      post_variable.author = self
+    end
   end
   def add_post_by_title(post_title)
     post_variable = Post.new
