@@ -10,7 +10,7 @@ class Author
     end
     def add_post(post_variable)
       @posts << post_variable
-      @@all_posts <<post_variable
+      @@all_posts << post_variable
       post_variable.author = self
     end
     def add_post_by_title(post_title)
