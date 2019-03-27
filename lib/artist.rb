@@ -20,12 +20,13 @@ class Artist
     end
     def add_song_by_name(name_string)
       new_song_variable = Song.new(name_string)
-      puts "We just initialized #{new_song_variable}"
-      puts "new_song_variable.name returns #{new_song_variable.name}"
-      puts "new_song_variable.artist initially returns #{new_song_variable.artist}"
+      songs_array << new_song_variable
+      # puts "We just initialized #{new_song_variable}"
+      # puts "new_song_variable.name returns #{new_song_variable.name}"
+      # puts "new_song_variable.artist initially returns #{new_song_variable.artist}"
       if new_song_variable.artist == nil
         new_song_variable.artist = self
-        puts "new_song_variable.artist now returns #{new_song_variable.artist}"
+        # puts "new_song_variable.artist now returns #{new_song_variable.artist}"
       end
     end
     def song_count
@@ -33,5 +34,8 @@ class Artist
     end
   end
 
-# the_beatles = Artist.new("The Beatles")
-# the_beatles.add_song_by_name("Help!")
+the_beatles = Artist.new("The Beatles")
+the_beatles.add_song_by_name("Help!")
+the_beatles.add_song_by_name("Lucy in the Sky with Diamonds")
+puts the_beatles.song_count
+
