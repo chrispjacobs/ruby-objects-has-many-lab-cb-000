@@ -9,7 +9,7 @@ class Author
   end
   def add_post(post_variable)
     @posts << post_variable
-    if post_variable.author = nil
+    if post_variable.author_name = nil
       post_variable.author = self
     end
   end
