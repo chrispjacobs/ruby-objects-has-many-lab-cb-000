@@ -1,32 +1,31 @@
 class Artist
-  attr_accessor :name
-  def initialize(name)
-    @name = name
-    @songs_array = []
+    attr_accessor :name
+    def initialize(name)
+      @name = name
+      @songs_array = []
+    end
+    def songs
+      @songs_array
+    end
+    def add_song(song_variable)
+    #   puts "song_variable inputted reads: #{song_variable}"
+    #   puts "songs_array initially reads: #{@songs_array}"
+      @songs_array << song_variable
+    #   puts "songs_array after shoveling reads: #{@songs_array}"
+    #   puts "song_variable.artist initially reads: #{song_variable.artist}"
+      if song_variable.artist == nil
+        song_variable.artist = self
+        # puts "song_variable.artist after equating reads: #{song_variable.artist}"
+      end
+    end
+    def add_song_by_name(name_string)
+      new_song_variable = Song.new
+      new_song_variable.name = name_string
+      if new_song_variable.artist == nil
+        new_song_variable.artist = self
+      end
+    end
+    def song_count
+      @songs_array.count
+    end
   end
-  def songs
-    @songs_array
-  end
-  def add_song(song_variable)
-    @songs_array << song_variable
-  end
-  def add_song_by_name(name_string)
-    new_song_variable = Song.new
-    new_song_variable.name = name_string
-    @songs_array << new_song_variable
-  end
-  def song_count
-    @songs_array.count
-  end
-end
-
-#the_beatles = Artist.new("The Beatles")
-#help = Song.new("Help!")
-#help.artist = the_beatles
-#puts "help.artist returns #{help.artist}"
-#puts "the_beatles.songs returns #{the_beatles.songs}"
-
-hello = Song.new("Hello")
-adele.add_song(hello)
-puts expect(adele.songs).include? hello
-puts hello.artist == adele
