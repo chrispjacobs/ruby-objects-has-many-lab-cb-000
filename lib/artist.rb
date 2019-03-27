@@ -36,6 +36,6 @@ class Artist
       @songs_array.count
     end
     def self.song_count
-      @@all_artists_songs_array
+      @@all_artists_songs_array.count
     end
   end
