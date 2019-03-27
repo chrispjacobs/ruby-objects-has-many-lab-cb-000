@@ -33,4 +33,3 @@ class Artist
       @songs_array.count
     end
   end
-
